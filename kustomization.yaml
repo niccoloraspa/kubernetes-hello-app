@@ -6,6 +6,6 @@ namespace: hello
 
 resources:
   - manifests/hello-ns.yaml
-  - manifests/hello-deployment.yaml
+  - manifests/hello-app.yaml
   - manifests/hello-svc.yaml
   - manifests/hello-ingress.yaml
