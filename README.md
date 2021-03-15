@@ -14,7 +14,7 @@ Kubernetes Hello App taken from https://github.com/GoogleCloudPlatform/kubernete
 kustomize build . | kubectl apply -f -
 ```
 
-- Add the following line to the bottom of the /etc/hosts file:
+- Add the following line to the bottom of the `/etc/hosts` file:
 
 ```bash
 <MINIKUBE_IP> hello-world.info
