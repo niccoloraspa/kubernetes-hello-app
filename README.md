@@ -1,6 +1,6 @@
 # kubernetes-hello-app
 
-Kubernetes Hello App taken from https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/master/hello-app
+Slight variation of the [Kubernetes example hello app](https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/master/hello-app).
 
 ## Tools
 
@@ -22,6 +22,14 @@ Add the following line to the bottom of the `/etc/hosts` file:
 curl -H "Host: hello-world.info" $(minikube ip)
 ```
 
+Expected output:
+
+```bash
+Hello, world!
+Version: 1.0.0
+Hostname: <host>
+```
+
 ## Update app
 
 To update the app, change the `image` field of the `hello-deployment`:
@@ -33,7 +41,7 @@ To update the app, change the `image` field of the `hello-deployment`:
 kubectl set image -n hello deployment/hello-app hello-app=gcr.io/google-samples/hello-app:2.0
 ```
 
-Alternatively you can edit the deployment and change the version via:
+Alternatively edit the deployment directly and change the field manually:
 
 ```bash
 kubectl edit deployments.apps -n hello hello-app
